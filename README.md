@@ -2,8 +2,8 @@
 
 This packge tested on ros_eloquent Ubuntu 18.04.
 
-The packge publish the pointer model to ROS and convert it to the camera frame of the user.
-Copy the model to PointerModel.
+The packge publish the pointer model to ROS and convert it to the camera frame of the user.\
+Copy the model to PointerModel folder.
 
 Instractions:
 1. In the launch flie set RealCam to bool value. defult is False and PKG_LOCATION parameter.
