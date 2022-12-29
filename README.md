@@ -11,7 +11,7 @@ Instractions:
 3. In Ros2_Eden_complete_model.py file change the path location.
 4. launch launch_pointer_node.launch.py
 
-To run pointer model in call StartAnimetionSrv: ros2 service call /StartAnimetionSrv std_srvs/srv/Empty\
+To run pointer model and publish the model results to rviz call StartAnimetionSrv: ros2 service call /StartAnimetionSrv std_srvs/srv/Empty\
 To see plot of the TF convertion from the model call PlotConvertionSrv: ros2 service call /PlotConvertionSrv std_srvs/srv/Empty
 
 ![demo](https://user-images.githubusercontent.com/57666167/209841750-a7796496-f718-472b-b1c1-6d4a393471c3.gif)
