@@ -1,8 +1,7 @@
 from setuptools import setup
 import os
 from glob import glob
-
-package_name = 'pointer_model_pkg'
+package_name = 'camera_fig_topic'
 
 setup(
     name=package_name,
@@ -23,8 +22,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'pointer_model_node=pointer_model_pkg.RealTime_6_ros:main',
-            'pub_model_to_robot=pointer_model_pkg.PublishModleRotetionData:main',
+            'camera_fig_topic_node=camera_fig_topic.create_camera_fig_topic:main',
         ],
     },
 )

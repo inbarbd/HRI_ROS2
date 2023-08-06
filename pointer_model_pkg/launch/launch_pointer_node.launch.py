@@ -6,6 +6,8 @@ from ament_index_python.packages import get_package_share_directory
 from launch.substitutions import LaunchConfiguration
 import launch
 import os
+#!/usr/bin/env /home/inbarm/dev_ws/src/HRI_ROS2/pointer_model_pkg/hri_ros2/bin/python3
+
 import numpy as np
 
 
@@ -35,8 +37,14 @@ def generate_launch_description():
         static_camera_tf_node1 = Node(package = "tf2_ros", 
                         node_executable = "static_transform_publisher",
                         arguments = ["0", "0", "0", "0", str(np.pi), str(-np.pi/2), "camera_frame_motive", "camera_frame"])
+        publish_video_node_node = Node(
+            package='camera_fig_topic',
+            node_executable='camera_fig_topic_node',
+            name='publish_video_node_node')
+        ld.add_action(publish_video_node_node)
         ld.add_action(static_camera_tf_node)
         ld.add_action(static_camera_tf_node1)
+        
     
     pointer_model_node_node = Node(
             package='pointer_model_pkg',
@@ -48,6 +56,7 @@ def generate_launch_description():
             node_executable='pub_model_to_robot',
             name='pub_model_to_robot_node',
             output='screen')
+    
 
 
     ld.add_action(pointer_model_node_node)
